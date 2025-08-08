@@ -9,7 +9,7 @@ type ServiceProps = {
 
 const Service = ({ icon, title, description }: ServiceProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+    <div className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-80">
       <div className="bg-primary/10 p-4 inline-block rounded-full mb-4 text-primary">
         {icon}
       </div>

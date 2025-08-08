@@ -13,7 +13,7 @@ const HomePage = () => {
 
   // Update document title
   useEffect(() => {
-    document.title = 'InduBuild - Industrial Construction & Property Services';
+    document.title = 'Allied Infra Solutions';
   }, []);
 
   return (

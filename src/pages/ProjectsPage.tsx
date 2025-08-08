@@ -61,7 +61,7 @@ const ProjectsPage = () => {
 
   // Update document title
   useEffect(() => {
-    document.title = 'Our Projects - InduBuild';
+    document.title = 'Our Projects';
   }, []);
 
   return (

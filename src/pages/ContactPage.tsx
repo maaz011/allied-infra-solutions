@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 const ContactPage = () => {
   // Update document title
   useEffect(() => {
-    document.title = 'Contact Us - InduBuild';
+    document.title = 'Contact Us';
   }, []);
 
   return (

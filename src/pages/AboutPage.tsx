@@ -5,7 +5,7 @@ import { Award, Target, Shield, Users } from 'lucide-react';
 const AboutPage = () => {
   // Update document title
   useEffect(() => {
-    document.title = 'About Us - InduBuild';
+    document.title = 'About Us';
   }, []);
 
   return (

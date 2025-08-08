@@ -58,9 +58,9 @@
 //   },
 //   {
 //     id: 7,
-//     title: "Eastway Industrial Estate Expansion",
-//     location: "Faridabad, Haryana",
-//     description: "Expansion of existing estate with new access roads, fencing, and utility setup.",
+//     title: "shivalik industries ",
+//     location: "bazidpur saboli, Haryana",
+//     description: "G+2 RCC BUILDING.",
 //     status: "Ongoing",
 //     image: "/16.jpg",
 //     completionPercentage: 60
@@ -80,65 +80,65 @@ import img16 from "@/assets/16.jpg";
 export const projects: ProjectType[] = [
   {
     id: 1,
-    title: "Titan Steel Manufacturing Plant",
-    location: "Pune, Maharashtra",
-    description: "Construction of a 50,000 sq.ft manufacturing facility with heavy-duty foundation and high-load steel framework.",
-    status: "75% completed",
+    title: "Bakelite House",
+    location: "Sonipat, Haryana",
+    description: "Construction of an RCC manufacturing facility for auto parts and rubber products.",
+    status: "Completed 2022",
     image: img35,
-    completionPercentage: 75
+    completionPercentage: 100
   },
   {
     id: 2,
-    title: "LogiPark Industrial Leasing Hub",
-    location: "Ahmedabad, Gujarat",
-    description: "100-acre industrial park offering modular warehouse spaces for lease.",
-    status: "Leasing in progress",
+    title: "Metro Electricals Pvt. Ltd.",
+    location: "Safiyabad, Sonipat, Haryana",
+    description: "RCC industrial building with an 18 ft height and provision for a 10-tonne crane on corebells.",
+    status: "Completed",
     image: img36,
-    completionPercentage: 90
+    completionPercentage: 100
   },
   {
     id: 3,
-    title: "MetroLink Rail Maintenance Yard",
-    location: "Nagpur, Maharashtra",
-    description: "Industrial shed with embedded rail tracks for metro maintenance vehicles.",
-    status: "Under construction",
+    title: "Anitec",
+    location: "Sonipat, Haryana",
+    description: "Industrial shed developed for a leading electrical parts manufacturing unit.",
+    status: "Under Construction",
     image: img2,
-    completionPercentage: 45
+    completionPercentage: 90
   },
   {
     id: 4,
-    title: "GreenPort Logistics Center",
-    location: "Jaipur, Rajasthan",
-    description: "Development of eco-friendly warehouse with solar roofing and rainwater harvesting.",
-    status: "Phase 1 completed",
+    title: "Jindal Warehouse",
+    location: "Bihar Sharif, Bihar",
+    description: "Eco-friendly warehouse developed for the Food Corporation of India, Phase 1 completed.",
+    status: "Phase 1 Completed",
     image: img29,
-    completionPercentage: 35
+    completionPercentage: 100
   },
   {
     id: 5,
-    title: "SteelCore Fabrication Unit",
-    location: "Ludhiana, Punjab",
-    description: "Turnkey construction of fabrication facility with overhead crane integration.",
-    status: "Nearing completion",
+    title: "Sartaj Shoes",
+    location: "Akbarpur Barota",
+    description: "Construction of an industrial shed for a shoe manufacturing unit; boundary wall completed.",
+    status: "Industrial shed for shoe manufacturing unit",
     image: img38,
-    completionPercentage: 85
+    completionPercentage: 10
   },
   {
     id: 6,
-    title: "InduLease Heavy Equipment Rental Depot",
-    location: "Surat, Gujarat",
-    description: "Rental facility for construction machinery with digital inventory system.",
+    title: "Pymen Cables India",
+    location: "Piau Manyari, Sonipat",
+    description: "Electric cable manufacturing facility with a built-up area of 30,000 sq ft in Piau Manyari, Sonipat.",
     status: "Operational",
     image: img18,
     completionPercentage: 100
   },
   {
     id: 7,
-    title: "Eastway Industrial Estate Expansion",
-    location: "Faridabad, Haryana",
-    description: "Expansion of existing estate with new access roads, fencing, and utility setup.",
-    status: "Ongoing",
+    title: "Modern Laminators Pvt. Ltd.",
+    location: "Sonipat, Haryana",
+    description: "Construction of an RCC industrial building in Sonipat for laminating solutions manufacturing.",
+    status: "Completed",
     image: img16,
-    completionPercentage: 60
+    completionPercentage: 100
   }
 ];
