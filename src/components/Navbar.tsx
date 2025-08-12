@@ -32,19 +32,26 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav className="flex justify-between items-center">
       {/* Logo & Title */}
-      <NavLink to="/" className="flex items-center">
-        <img 
-          src={logo}
-          alt="Logo"
-          className="h-24 w-24 object-contain mt-5"
-        />
-        <span className="text-xl md:text-2xl font-bold text-gray-800 leading-none">
-          ALLIED INFRA SOLUTIONS
+      <NavLink to="/">
+      <div className="flex items-center gap-4 ">
+        <div>
+              <img 
+                src={logo}
+                alt="Logo"
+                width={80}
+                height={18}
+                className="object-contain mt-5 "
+              />
+        </div>
+                
+        <span className="text-xl md:text-2xl font-bold text-gray-800 leading-none mt-4 ">
+            ALLIED INFRA SOLUTIONS
         </span>
+      </div>
       </NavLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 mt-5">
             {['/', '/about', '/projects', '/contact'].map((path, index) => {
               const label = ['Home', 'About Us', 'Projects', 'Contact Us'][index];
               return (
