@@ -12,6 +12,7 @@ type FormValues = {
 };
 
 const ContactForm = () => {
+  // console.log()
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>();
@@ -77,10 +78,10 @@ Let’s ensure we respond quickly and address their needs.
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "apikey": "modimc"
+          "apikey": import.meta.env.VITE_EVOLUTION_KEY
         },
         body: JSON.stringify({
-          number: "919667462284",
+          number: import.meta.env.VITE_ABDUL_WHATSAPP,
           text: messageText
         })
       }
@@ -92,7 +93,7 @@ Let’s ensure we respond quickly and address their needs.
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "apikey": "modimc"
+          "apikey": import.meta.env.VITE_EVOLUTION_KEY
         },
         body: JSON.stringify({
           number: `91${data.mobile}`,
@@ -116,10 +117,10 @@ Let’s ensure we respond quickly and address their needs.
     setIsSubmitting(false);
   }   
 
-  const serviceID = 'service_13lvyeg';
-  const adminTemplateID = 'template_mluya8x';     // replace with your actual admin template ID
-  const userTemplateID = 'template_e8089g1';       // replace with your actual user template ID
-  const publicKey = 'MylrLw5zBRs5yqgx6';
+  const serviceID = import.meta.env.VITE_SERVICE_ID;
+  const adminTemplateID = import.meta.env.VITE_ADMIN_TEMPLATE_ID;     // replace with your actual admin template ID
+  const userTemplateID =import.meta.env.VITE_USER_TEMPLATE_ID;       // replace with your actual user template ID
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
   const timestamp = new Date().toLocaleString();   // Send human-readable time
 
   // Payload shared between both templates

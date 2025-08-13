@@ -89,18 +89,18 @@ const StatsCounter = () => {
         >
           <Stat
             icon={<Building size={32} />}
-            value={250}
+            value={5}
             label="Projects Completed"
           />
-          <Stat icon={<Users size={32} />} value={120} label="Happy Clients" />
+          <Stat icon={<Users size={32} />} value={12} label="Happy Clients" />
           <Stat
             icon={<Construction size={32} />}
-            value={75}
+            value={4}
             label="Ongoing Projects"
           />
           <Stat
             icon={<Briefcase size={32} />}
-            value={15}
+            value={10}
             label="Years Experience"
           />
         </motion.div>
