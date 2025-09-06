@@ -4,6 +4,9 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    __DEFINES__: JSON.stringify({})
+  },
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
