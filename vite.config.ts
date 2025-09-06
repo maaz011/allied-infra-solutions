@@ -5,7 +5,8 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   define: {
-    __DEFINES__: JSON.stringify({})
+    __DEFINES__: JSON.stringify({}),
+    __HMR_CONFIG_NAME__: JSON.stringify('')
   },
   plugins: [react()],
   optimizeDeps: {
