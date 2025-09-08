@@ -5,7 +5,6 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   define: {
-    __DEFINES__: '{}',
     // Add any other environment variables you're using
     'process.env.VITE_ABDUL_WHATSAPP': JSON.stringify(process.env.VITE_ABDUL_WHATSAPP),
     'process.env.VITE_EVOLUTION_KEY': JSON.stringify(process.env.VITE_EVOLUTION_KEY),
