@@ -4,13 +4,27 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  define: {
+    __DEFINES__: '{}',
+    // Add any other environment variables you're using
+    'process.env.VITE_ABDUL_WHATSAPP': JSON.stringify(process.env.VITE_ABDUL_WHATSAPP),
+    'process.env.VITE_EVOLUTION_KEY': JSON.stringify(process.env.VITE_EVOLUTION_KEY),
+    'process.env.VITE_SERVICE_ID': JSON.stringify(process.env.VITE_SERVICE_ID),
+    'process.env.VITE_ADMIN_TEMPLATE_ID': JSON.stringify(process.env.VITE_ADMIN_TEMPLATE_ID),
+    'process.env.VITE_USER_TEMPLATE_ID': JSON.stringify(process.env.VITE_USER_TEMPLATE_ID),
+    'process.env.VITE_PUBLIC_KEY': JSON.stringify(process.env.VITE_PUBLIC_KEY),
+
+
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    emptyOutDir: true,
+
   }
 });
 
