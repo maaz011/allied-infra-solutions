@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,26 +10,164 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
   }
-  
+
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-cyan-400;
+  }
+
   .section-padding {
     @apply py-16 md:py-24;
   }
-  
+
   .card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300;
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 border border-gray-100;
   }
-  
+
   .card:hover {
-    @apply shadow-lg transform -translate-y-1;
+    @apply shadow-2xl transform -translate-y-2;
+  }
+
+  /* Premium button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold
+           hover:from-primary hover:to-cyan-400 transform hover:scale-105 transition-all duration-300
+           shadow-md hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-md text-white px-6 py-3 rounded-lg font-semibold
+           border border-white/20 hover:bg-white/20 hover:border-white/30
+           transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Animated gradient background */
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
   }
 }
 
+/* Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3498DB, #2980b9);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2980b9, #3498DB);
+}
+
+/* Selection color */
+::selection {
+  background-color: #3498DB;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #3498DB;
+  color: white;
+}
+
+/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
+/* Premium focus styles */
+*:focus {
+  outline: none;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+}
+
+/* Remove focus box-shadow from navigation links */
+nav a:focus,
+nav a:focus-visible {
+  box-shadow: none !important;
+}
+
+/* Base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Override box-sizing for navigation buttons */
+nav a {
+  box-sizing: content-box !important;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Entrance animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }

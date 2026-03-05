@@ -1,0 +1,50 @@
+# Allied Infra Solutions - Robots.txt
+# https://alliedinfrasolutions.in
+# Last Updated: March 2026
+
+# Allow all major search engines
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?*
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Allow: /*.js
+Allow: /*.css
+Crawl-delay: 0
+
+# Bingbot specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Allow image crawlers
+User-agent: Googlebot-Image
+Allow: /
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.png
+Allow: /*.webp
+
+# Sitemap location
+Sitemap: https://alliedinfrasolutions.in/sitemap.xml
+
+# Block unwanted bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
