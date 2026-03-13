@@ -124,11 +124,11 @@ const HeroSlider = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <div className="flex items-center">
-                <div className="text-3xl font-bold text-primary mr-2">15+</div>
+                <div className="text-3xl font-bold text-primary mr-2">10+</div>
                 <div className="text-sm">Years of Excellence</div>
               </div>
               <div className="flex items-center">
-                <div className="text-3xl font-bold text-primary mr-2">500+</div>
+                <div className="text-3xl font-bold text-primary mr-2">15+</div>
                 <div className="text-sm">Projects Delivered</div>
               </div>
               <div className="flex items-center">

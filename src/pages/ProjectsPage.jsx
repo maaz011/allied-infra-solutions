@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SEOHead from '../components/SEOHead';
 import { projects } from '../data/projects';
+import ProjectCard from '../components/ProjectCard';
 // import { ProjectType } from '../types/ProjectType';
 
 const ProjectsPage = () => {
@@ -118,52 +119,9 @@ const ProjectsPage = () => {
           </div>
           
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {filteredProjects.map((project, index) => (
-              <motion.div 
-                key={project.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={`${project.title} - Allied Infra Solutions Industrial Project in ${project.location}`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
-                      {project.status}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-semibold mb-2 text-secondary">{project.title}</h3>
-                  <p className="text-sm text-primary font-medium mb-4">{project.location}</p>
-                  <p className="text-darkgray mb-6">{project.description}</p>
-                  
-                  {project.completionPercentage !== undefined && (
-                    <div className="mb-2">
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm text-darkgray">Completion</span>
-                        <span className="text-sm font-medium text-secondary">{project.completionPercentage}%</span>
-                      </div>
-                      <div className="w-full bg-lightgray rounded-full h-2.5">
-                        <div 
-                          className="bg-primary h-2.5 rounded-full" 
-                          style={{ width: `${project.completionPercentage}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
+              <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
           
