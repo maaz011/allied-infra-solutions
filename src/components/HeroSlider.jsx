@@ -7,10 +7,9 @@ import { ChevronRight } from 'lucide-react';
 
 const HeroSlider = () => {
   const [sliderImages, setSliderImages] = useState([]);
-  const [emblaRef] = useEmblaCarousel(
-    { loop: true, align: 'start' }, 
-    [Autoplay({ delay: 2000, stopOnInteraction: false })]
-  );
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 2000, stopOnInteraction: false })
+  ]);
 
   // Auto-detect slider images
   useEffect(() => {
@@ -40,12 +39,11 @@ const HeroSlider = () => {
       <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
         <div className="flex h-full">
           {sliderImages.map((image, index) => (
-            <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
+            <div key={index} className="flex-[0_0_100%] min-w-0 h-full relative">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover"
-                loading="eager"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
           ))}
