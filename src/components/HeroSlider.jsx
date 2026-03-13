@@ -1,37 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import slider1 from '@/assets/slider_1.png';
+import slider2 from '@/assets/slider_2.png';
+import slider3 from '@/assets/slider_3.png';
+import slider4 from '@/assets/slider_4.png';
 
 const HeroSlider = () => {
-  const [sliderImages, setSliderImages] = useState([]);
+  const sliderImages = [slider1, slider2, slider3, slider4];
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 2000, stopOnInteraction: false })
   ]);
 
-  // Auto-detect slider images
-  useEffect(() => {
-    const images = [];
-    for (let i = 1; i <= 4; i++) {
-      images.push(`/slider_${i}.png`);
-    }
-    setSliderImages(images);
-  }, []);
-
-  if (sliderImages.length === 0) {
-    return (
-      <section className="relative min-h-screen flex items-center pt-20 md:pt-24 bg-gradient-to-br from-secondary to-gray-900">
-        <div className="container mx-auto px-4 text-white">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
-            Allied Infra Solutions
-          </h1>
-          <p className="text-xl mb-8">Loading...</p>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-transparent">
