@@ -37,14 +37,13 @@ const HeroSlider = () => {
     <section className="relative min-h-screen overflow-hidden bg-transparent">
       {/* Background Slider - Horizontal Scrolling Carousel */}
       <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
-        <div className="flex h-full w-full">
+        <div className="flex h-full">
           {sliderImages.map((image, index) => (
-            <div key={index} className="flex-[0_0_100%] min-w-0 h-full w-full relative">
+            <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover"
-                style={{ display: 'block', minHeight: '100vh' }}
+                className="w-full h-full object-cover min-h-screen"
               />
             </div>
           ))}
