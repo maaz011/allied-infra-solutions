@@ -7,9 +7,10 @@ import { ChevronRight } from 'lucide-react';
 
 const HeroSlider = () => {
   const [sliderImages, setSliderImages] = useState([]);
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 2000, stopOnInteraction: false })
-  ]);
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, align: 'start' }, 
+    [Autoplay({ delay: 2000, stopOnInteraction: false })]
+  );
 
   // Auto-detect slider images
   useEffect(() => {
