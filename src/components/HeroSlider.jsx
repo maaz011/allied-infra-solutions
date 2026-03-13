@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
@@ -10,11 +10,28 @@ import slider3 from '@/assets/slider_3.png';
 import slider4 from '@/assets/slider_4.png';
 
 const HeroSlider = () => {
-  const sliderImages = [slider1, slider2, slider3, slider4];
+  const [sliderImages, setSliderImages] = useState([]);
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 2000, stopOnInteraction: false })
   ]);
 
+  // Set slider images
+  useEffect(() => {
+    setSliderImages([slider1, slider2, slider3, slider4]);
+  }, []);
+
+  if (sliderImages.length === 0) {
+    return (
+      <section className="relative min-h-screen flex items-center pt-20 md:pt-24 bg-gradient-to-br from-secondary to-gray-900">
+        <div className="container mx-auto px-4 text-white">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
+            Allied Infra Solutions
+          </h1>
+          <p className="text-xl mb-8">Loading...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-transparent">
@@ -22,11 +39,11 @@ const HeroSlider = () => {
       <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
         <div className="flex h-full">
           {sliderImages.map((image, index) => (
-            <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
+            <div key={index} className="flex-[0_0_100%] min-w-0">
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover min-h-screen"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
