@@ -11,9 +11,10 @@ import slider4 from '@/assets/slider_4.png';
 
 const HeroSlider = () => {
   const [sliderImages, setSliderImages] = useState([]);
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 2000, stopOnInteraction: false })
-  ]);
+  
+  // Initialize autoplay plugin safely
+  const autoplayPlugin = Autoplay({ delay: 2000, stopOnInteraction: false });
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [autoplayPlugin]);
 
   // Set slider images
   useEffect(() => {
